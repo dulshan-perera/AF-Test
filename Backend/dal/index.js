@@ -10,9 +10,8 @@ client.connect(error =>{
     if(error){
         console.error(error);
         process.exit(-1);
-    }else{
-        console.log("Successfully connected to mongodb");
     }
+    console.log("Successfully connected to mongodb");
 });
 
 export {client};
