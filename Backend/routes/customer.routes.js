@@ -9,7 +9,7 @@ const router = new Router({
 router.post('/', async ctx=>{
     let customer = ctx.request.body;
     customer = await registerCustomer(customer);
-    ctx.response = 201;
+    ctx.response.status = 201;
     ctx.body = customer;
 });
 
