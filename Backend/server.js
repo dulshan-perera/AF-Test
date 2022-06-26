@@ -1,4 +1,5 @@
 import Koa from 'koa';
+import cors from '@koa/cors'
 import bodyParser from 'koa-bodyparser';
 import dotenv from 'dotenv'
 import { authenticate } from './middleware/auth.middleware.js';
@@ -11,6 +12,7 @@ import WishListRoutes from './routes/wishList.routes.js';
 import './dal/index.js';
 
 const app = new Koa();
+app.use(cors())
 dotenv.config();
 app.use(bodyParser());
 
