@@ -1,5 +1,5 @@
 import Router from '@koa/router';
-import { addToCart, createCart, fetchCart, fetchCarts } from '../api/cart.api.js';
+import { addToCart, createCart, fetchCart, fetchCarts, purchase } from '../api/cart.api.js';
 
 const router = new Router ({
     prefix:'/carts'
@@ -50,6 +50,18 @@ router.put('/:id', async ctx=>{
         ctx.body = result;
     }catch(e){
         throw new Error("Error in adding to the Cart!")
+    }
+})
+
+//purchase
+router.get('/:id/purchase', async ctx =>{
+    let id = ctx.params.id;
+    const result = await purchase(id);
+    try{
+        ctx.response.status = 200;
+        ctx.body = result;
+    }catch(e){
+        throw new Error ("Error in calculating price")
     }
 })
 
