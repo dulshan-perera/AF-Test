@@ -25398,6 +25398,8 @@ var _home = require("./src/pages/Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
 var _login = require("./src/pages/Login");
 var _loginDefault = parcelHelpers.interopDefault(_login);
+var _registerUser = require("./src/pages/RegisterUser");
+var _registerUserDefault = parcelHelpers.interopDefault(_registerUser);
 class App extends _reactDefault.default.Component {
     constructor(props){
         super(props);
@@ -25406,13 +25408,13 @@ class App extends _reactDefault.default.Component {
         return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.BrowserRouter, {
             __source: {
                 fileName: "App.jsx",
-                lineNumber: 13
+                lineNumber: 14
             },
             __self: this,
             children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactRouterDom.Routes, {
                 __source: {
                     fileName: "App.jsx",
-                    lineNumber: 14
+                    lineNumber: 15
                 },
                 __self: this,
                 children: [
@@ -25422,7 +25424,7 @@ class App extends _reactDefault.default.Component {
                         }),
                         __source: {
                             fileName: "App.jsx",
-                            lineNumber: 15
+                            lineNumber: 16
                         },
                         __self: this
                     }),
@@ -25432,7 +25434,17 @@ class App extends _reactDefault.default.Component {
                         }),
                         __source: {
                             fileName: "App.jsx",
-                            lineNumber: 16
+                            lineNumber: 17
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/register",
+                        element: /*#__PURE__*/ _jsxRuntime.jsx(_registerUserDefault.default, {
+                        }),
+                        __source: {
+                            fileName: "App.jsx",
+                            lineNumber: 18
                         },
                         __self: this
                     })
@@ -25448,7 +25460,7 @@ exports.default = App;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","./src/pages/Home":"9YG6N","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","react-router-dom":"kjA5T","./src/pages/Login":"7k7KE"}],"9YG6N":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","./src/pages/Home":"9YG6N","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","react-router-dom":"kjA5T","./src/pages/Login":"7k7KE","./src/pages/RegisterUser":"yC19n"}],"9YG6N":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3fce = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -25468,7 +25480,7 @@ exports.default = Home = _s(()=>{
     _react.useEffect(()=>{
         if (localStorage.authentication !== null) setRole(_auth.getAuth(localStorage.authentication).role);
     });
-    return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+    return role === 'customer' ? /*#__PURE__*/ _jsxRuntime.jsx("div", {
         __source: {
             fileName: "src/pages/Home.jsx",
             lineNumber: 12
@@ -25481,11 +25493,42 @@ exports.default = Home = _s(()=>{
             },
             __self: undefined,
             children: [
-                "HOME helloo ",
+                "HOME helloo customer ",
                 role
             ]
         })
-    }));
+    }) : role === 'trader' ? /*#__PURE__*/ _jsxRuntime.jsx("div", {
+        __source: {
+            fileName: "src/pages/Home.jsx",
+            lineNumber: 17
+        },
+        __self: undefined,
+        children: /*#__PURE__*/ _jsxRuntime.jsxs("h2", {
+            __source: {
+                fileName: "src/pages/Home.jsx",
+                lineNumber: 18
+            },
+            __self: undefined,
+            children: [
+                "HOME helloo trader ",
+                role
+            ]
+        })
+    }) : /*#__PURE__*/ _jsxRuntime.jsx("div", {
+        __source: {
+            fileName: "src/pages/Home.jsx",
+            lineNumber: 22
+        },
+        __self: undefined,
+        children: /*#__PURE__*/ _jsxRuntime.jsx("h2", {
+            __source: {
+                fileName: "src/pages/Home.jsx",
+                lineNumber: 23
+            },
+            __self: undefined,
+            children: "Loading....."
+        })
+    });
 }, "I6d0rxgIdmm0IGXgWdryR+re/NI=");
 
   $parcel$ReactRefreshHelpers$3fce.postlude(module);
@@ -27410,18 +27453,21 @@ exports.default = Login = _s(()=>{
             }
         });
     };
+    const register = ()=>{
+        window.location = '/register';
+    };
     return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
         className: "container",
         __source: {
             fileName: "src/pages/Login.jsx",
-            lineNumber: 23
+            lineNumber: 27
         },
         __self: undefined,
         children: [
             /*#__PURE__*/ _jsxRuntime.jsx("h2", {
                 __source: {
                     fileName: "src/pages/Login.jsx",
-                    lineNumber: 24
+                    lineNumber: 28
                 },
                 __self: undefined,
                 children: "LOGIN"
@@ -27429,14 +27475,14 @@ exports.default = Login = _s(()=>{
             /*#__PURE__*/ _jsxRuntime.jsx("br", {
                 __source: {
                     fileName: "src/pages/Login.jsx",
-                    lineNumber: 25
+                    lineNumber: 29
                 },
                 __self: undefined
             }),
             /*#__PURE__*/ _jsxRuntime.jsx("label", {
                 __source: {
                     fileName: "src/pages/Login.jsx",
-                    lineNumber: 26
+                    lineNumber: 30
                 },
                 __self: undefined,
                 children: "Email"
@@ -27452,21 +27498,21 @@ exports.default = Login = _s(()=>{
                 ,
                 __source: {
                     fileName: "src/pages/Login.jsx",
-                    lineNumber: 27
+                    lineNumber: 31
                 },
                 __self: undefined
             }),
             /*#__PURE__*/ _jsxRuntime.jsx("br", {
                 __source: {
                     fileName: "src/pages/Login.jsx",
-                    lineNumber: 27
+                    lineNumber: 31
                 },
                 __self: undefined
             }),
             /*#__PURE__*/ _jsxRuntime.jsx("label", {
                 __source: {
                     fileName: "src/pages/Login.jsx",
-                    lineNumber: 28
+                    lineNumber: 32
                 },
                 __self: undefined,
                 children: "Password"
@@ -27482,14 +27528,14 @@ exports.default = Login = _s(()=>{
                 ,
                 __source: {
                     fileName: "src/pages/Login.jsx",
-                    lineNumber: 29
+                    lineNumber: 33
                 },
                 __self: undefined
             }),
             /*#__PURE__*/ _jsxRuntime.jsx("br", {
                 __source: {
                     fileName: "src/pages/Login.jsx",
-                    lineNumber: 29
+                    lineNumber: 33
                 },
                 __self: undefined
             }),
@@ -27498,10 +27544,27 @@ exports.default = Login = _s(()=>{
                 onClick: handleSubmit,
                 __source: {
                     fileName: "src/pages/Login.jsx",
-                    lineNumber: 30
+                    lineNumber: 34
                 },
                 __self: undefined,
                 children: "LOGIN"
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                __source: {
+                    fileName: "src/pages/Login.jsx",
+                    lineNumber: 35
+                },
+                __self: undefined
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                type: "submit",
+                onClick: register,
+                __source: {
+                    fileName: "src/pages/Login.jsx",
+                    lineNumber: 36
+                },
+                __self: undefined,
+                children: "SignUP"
             })
         ]
     }));
@@ -30714,6 +30777,235 @@ var utils = require('./../utils');
     return utils.isObject(payload) && payload.isAxiosError === true;
 };
 
-},{"./../utils":"hOPY0"}]},["2rAXy","l0CE5","e84fU"], "e84fU", "parcelRequire10c2")
+},{"./../utils":"hOPY0"}],"yC19n":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$c965 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$c965.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _openApi = require("../api/open.api");
+var _s = $RefreshSig$();
+exports.default = RegisterUser = _s(()=>{
+    _s();
+    const [user, setUser] = _react.useState({
+        name: "",
+        email: "",
+        phone: "",
+        role: "",
+        password: ""
+    });
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        _openApi.register(user).then((res)=>{
+            console.log(res);
+        }).catch((error)=>{
+            console.log(error);
+        });
+    };
+    return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
+        __source: {
+            fileName: "src/pages/RegisterUser.jsx",
+            lineNumber: 23
+        },
+        __self: undefined,
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsx("h2", {
+                __source: {
+                    fileName: "src/pages/RegisterUser.jsx",
+                    lineNumber: 24
+                },
+                __self: undefined,
+                children: "Register User"
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsxs("form", {
+                __source: {
+                    fileName: "src/pages/RegisterUser.jsx",
+                    lineNumber: 25
+                },
+                __self: undefined,
+                children: [
+                    /*#__PURE__*/ _jsxRuntime.jsx("label", {
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 26
+                        },
+                        __self: undefined,
+                        children: "Enter name"
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("input", {
+                        type: "text",
+                        name: "name",
+                        value: user.name,
+                        onChange: (e)=>setUser({
+                                ...user,
+                                name: e.target.value
+                            })
+                        ,
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 27
+                        },
+                        __self: undefined
+                    }),
+                    " ",
+                    /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 27
+                        },
+                        __self: undefined
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("label", {
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 28
+                        },
+                        __self: undefined,
+                        children: "Enter Email"
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("input", {
+                        type: "text",
+                        name: "email",
+                        value: user.email,
+                        onChange: (e)=>setUser({
+                                ...user,
+                                email: e.target.value
+                            })
+                        ,
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 29
+                        },
+                        __self: undefined
+                    }),
+                    " ",
+                    /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 29
+                        },
+                        __self: undefined
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("label", {
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 30
+                        },
+                        __self: undefined,
+                        children: "Enter Phone"
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("input", {
+                        type: "text",
+                        name: "phone",
+                        value: user.phone,
+                        onChange: (e)=>setUser({
+                                ...user,
+                                phone: e.target.value
+                            })
+                        ,
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 31
+                        },
+                        __self: undefined
+                    }),
+                    " ",
+                    /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 31
+                        },
+                        __self: undefined
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("label", {
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 32
+                        },
+                        __self: undefined,
+                        children: "Enter Role"
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("input", {
+                        type: "text",
+                        name: "role",
+                        value: user.role,
+                        onChange: (e)=>setUser({
+                                ...user,
+                                role: e.target.value
+                            })
+                        ,
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 33
+                        },
+                        __self: undefined
+                    }),
+                    " ",
+                    /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 33
+                        },
+                        __self: undefined
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("label", {
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 34
+                        },
+                        __self: undefined,
+                        children: "Enter Password"
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("input", {
+                        type: "text",
+                        name: "password",
+                        value: user.password,
+                        onChange: (e)=>setUser({
+                                ...user,
+                                password: e.target.value
+                            })
+                        ,
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 35
+                        },
+                        __self: undefined
+                    }),
+                    " ",
+                    /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 35
+                        },
+                        __self: undefined
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                        type: "submit",
+                        onClick: handleSubmit,
+                        __source: {
+                            fileName: "src/pages/RegisterUser.jsx",
+                            lineNumber: 36
+                        },
+                        __self: undefined,
+                        children: "Submit"
+                    })
+                ]
+            })
+        ]
+    }));
+}, "6ZXeTPhp+DmhOFhRoOYbX1sKNrE=");
+
+  $parcel$ReactRefreshHelpers$c965.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","../api/open.api":"jcqeE","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}]},["2rAXy","l0CE5","e84fU"], "e84fU", "parcelRequire10c2")
 
 //# sourceMappingURL=index.b44a5685.js.map

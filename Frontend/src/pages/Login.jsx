@@ -19,6 +19,10 @@ export default Login = () =>{
             }
         })
     }
+    const register = () =>{
+        window.location = '/register';
+    }
+
     return(
         <div className="container">
             <h2>LOGIN</h2>
@@ -28,6 +32,8 @@ export default Login = () =>{
             <label>Password</label>
             <input type="text" id="password" value={creds.password} onChange={(e) => setCreds({...creds, password:e.target.value})}/><br/>
             <button type="submit" onClick={handleSubmit}>LOGIN</button>
+            <br/>
+            <button type='submit' onClick={register}>SignUP</button>
         </div>
     )
     

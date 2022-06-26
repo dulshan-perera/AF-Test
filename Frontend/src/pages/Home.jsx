@@ -8,9 +8,19 @@ export default Home = () =>{
             setRole(getAuth(localStorage.authentication).role);
         }
     })
-        return(
+        return role === 'customer'? (
             <div>
-                <h2>HOME helloo {role}</h2>
+                <h2>HOME helloo customer {role}</h2>
+                
+            </div>
+        ):role === 'trader' ?(
+            <div>
+                <h2>HOME helloo trader {role}</h2>
+            </div>
+            
+        ):(
+            <div>
+                <h2>Loading.....</h2>
             </div>
         )
 }
