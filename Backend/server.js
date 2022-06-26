@@ -1,7 +1,7 @@
 import Koa from 'koa';
 import bodyParser from 'koa-bodyparser';
 import dotenv from 'dotenv'
-import CustomerRoutes from './routes/customer.routes.js'
+import UserRoutes from './routes/user.routes.js'
 import LoginRoutes from './routes/login.routes.js'
 import './dal/index.js';
 
@@ -9,8 +9,8 @@ const app = new Koa();
 dotenv.config();
 app.use(bodyParser());
 
-app.use(CustomerRoutes.routes())
-    .use(CustomerRoutes.allowedMethods());
+app.use(UserRoutes.routes())
+    .use(UserRoutes.allowedMethods());
 app.use(LoginRoutes.routes())
     .use(LoginRoutes.allowedMethods());
 
