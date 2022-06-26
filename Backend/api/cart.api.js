@@ -23,4 +23,18 @@ const addToCart = async (id, item) =>{
     return await add(id, item);
 }
 
-export {createCart, fetchCarts, fetchCart, addToCart}
+//purchase
+const purchase = async(id) =>{
+    const cart = await getById(id);
+    if(cart !== null) {
+        let length = cart.items.length;
+        console.log(cart.items.length)
+        let total = 0;
+        for(let i = 0; i<length; i++){
+            total = total + cart.items[i].price;
+        }
+        return total;
+    }
+}
+
+export {createCart, fetchCarts, fetchCart, addToCart, purchase}
