@@ -1,15 +1,16 @@
-import { authenticate } from "../dal/login.dao.js";
+import { auth } from "../dal/login.dao.js";
 import jwt  from "jsonwebtoken";
 
 const login = async(creds) =>{
-    const result = await authenticate(creds);
+    const result = await auth(creds);
     if(result !== null){
-        const email = result.email;
-        const id = result.id;
-        const role = result.role
-        const authBody = {email, id, role}
+        const authBody = {
+            email: result.email,
+            id: result.id,
+            role: result.role
+        }
         const accessToken = jwt.sign(authBody, process.env.AUTH_SECRET);
-        return {accessToken, role};
+        return {accessToken};
     }else{
         return "Login failed!"
     }
