@@ -1,4 +1,7 @@
-import axios from 'axios.config.js'
+import axios from "axios";
+
+axios.defaults.baseURL = 'http://localhost:3000/';
+axios.defaults.headers.common['authentication'] = localStorage.getItem('authentication');
 
 export const addPromotion = (promoObj) => axios.post(`/promotions`, promoObj);
 export const fetchPromotions = () => axios.get(`/promotions`);
