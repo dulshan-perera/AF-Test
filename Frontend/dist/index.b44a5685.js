@@ -25394,8 +25394,14 @@ var _jsxRuntime = require("react/jsx-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
+var _addItem = require("./src/pages/AddItem");
+var _addItemDefault = parcelHelpers.interopDefault(_addItem);
+var _createCart = require("./src/pages/CreateCart");
+var _createCartDefault = parcelHelpers.interopDefault(_createCart);
 var _home = require("./src/pages/Home");
 var _homeDefault = parcelHelpers.interopDefault(_home);
+var _inventory = require("./src/pages/Inventory");
+var _inventoryDefault = parcelHelpers.interopDefault(_inventory);
 var _login = require("./src/pages/Login");
 var _loginDefault = parcelHelpers.interopDefault(_login);
 var _registerUser = require("./src/pages/RegisterUser");
@@ -25408,13 +25414,13 @@ class App extends _reactDefault.default.Component {
         return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.BrowserRouter, {
             __source: {
                 fileName: "App.jsx",
-                lineNumber: 14
+                lineNumber: 17
             },
             __self: this,
             children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactRouterDom.Routes, {
                 __source: {
                     fileName: "App.jsx",
-                    lineNumber: 15
+                    lineNumber: 18
                 },
                 __self: this,
                 children: [
@@ -25424,7 +25430,7 @@ class App extends _reactDefault.default.Component {
                         }),
                         __source: {
                             fileName: "App.jsx",
-                            lineNumber: 16
+                            lineNumber: 19
                         },
                         __self: this
                     }),
@@ -25434,7 +25440,7 @@ class App extends _reactDefault.default.Component {
                         }),
                         __source: {
                             fileName: "App.jsx",
-                            lineNumber: 17
+                            lineNumber: 20
                         },
                         __self: this
                     }),
@@ -25444,7 +25450,37 @@ class App extends _reactDefault.default.Component {
                         }),
                         __source: {
                             fileName: "App.jsx",
-                            lineNumber: 18
+                            lineNumber: 21
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/add-item",
+                        element: /*#__PURE__*/ _jsxRuntime.jsx(_addItemDefault.default, {
+                        }),
+                        __source: {
+                            fileName: "App.jsx",
+                            lineNumber: 22
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/inventory/:id",
+                        element: /*#__PURE__*/ _jsxRuntime.jsx(_inventoryDefault.default, {
+                        }),
+                        __source: {
+                            fileName: "App.jsx",
+                            lineNumber: 23
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/create-cart",
+                        element: /*#__PURE__*/ _jsxRuntime.jsx(_createCartDefault.default, {
+                        }),
+                        __source: {
+                            fileName: "App.jsx",
+                            lineNumber: 24
                         },
                         __self: this
                     })
@@ -25460,7 +25496,7 @@ exports.default = App;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","./src/pages/Home":"9YG6N","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","react-router-dom":"kjA5T","./src/pages/Login":"7k7KE","./src/pages/RegisterUser":"yC19n"}],"9YG6N":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","./src/pages/Home":"9YG6N","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","react-router-dom":"kjA5T","./src/pages/Login":"7k7KE","./src/pages/RegisterUser":"yC19n","./src/pages/AddItem":"be8Uo","./src/pages/Inventory":"igJ33","./src/pages/CreateCart":"2NY0U"}],"9YG6N":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3fce = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27585,13 +27621,13 @@ parcelHelpers.export(exports, "register", ()=>register
 var _axios = require("axios");
 var _axiosDefault = parcelHelpers.interopDefault(_axios);
 _axiosDefault.default.defaults.baseURL = 'http://localhost:3000/';
-_axiosDefault.default.defaults.headers.common['authentication'] = localStorage.getItem('authenticaiton');
+_axiosDefault.default.defaults.headers.common['authentication'] = localStorage.getItem('authentication');
 const login = (authObj)=>_axiosDefault.default.post('/login', authObj)
 ;
 const register = (userObj)=>_axiosDefault.default.post('/register', userObj)
 ;
 
-},{"axios":"iYoWk","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"iYoWk":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","axios":"iYoWk"}],"iYoWk":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 
 },{"./lib/axios":"3QmO2"}],"3QmO2":[function(require,module,exports) {
@@ -31006,6 +31042,448 @@ exports.default = RegisterUser = _s(()=>{
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","../api/open.api":"jcqeE","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}]},["2rAXy","l0CE5","e84fU"], "e84fU", "parcelRequire10c2")
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","../api/open.api":"jcqeE","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"be8Uo":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$e557 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$e557.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _itemApi = require("../api/item.api");
+var _s = $RefreshSig$();
+exports.default = AddItem = _s(()=>{
+    _s();
+    const [item, setItem] = useState({
+        name: "",
+        price: ""
+    });
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        _itemApi.addItem(item).then((res)=>{
+            console.log(res);
+        }).catch((error)=>{
+            console.log(error);
+        });
+    };
+    return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
+        __source: {
+            fileName: "src/pages/AddItem.jsx",
+            lineNumber: 20
+        },
+        __self: undefined,
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsx("h2", {
+                __source: {
+                    fileName: "src/pages/AddItem.jsx",
+                    lineNumber: 21
+                },
+                __self: undefined,
+                children: "Add Item"
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsxs("form", {
+                __source: {
+                    fileName: "src/pages/AddItem.jsx",
+                    lineNumber: 22
+                },
+                __self: undefined,
+                children: [
+                    /*#__PURE__*/ _jsxRuntime.jsx("label", {
+                        __source: {
+                            fileName: "src/pages/AddItem.jsx",
+                            lineNumber: 23
+                        },
+                        __self: undefined,
+                        children: "Enter Item name"
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("input", {
+                        type: "text",
+                        name: "name",
+                        value: item.name,
+                        onChange: (e)=>setItem({
+                                ...item,
+                                name: e.target.value
+                            })
+                        ,
+                        __source: {
+                            fileName: "src/pages/AddItem.jsx",
+                            lineNumber: 24
+                        },
+                        __self: undefined
+                    }),
+                    " ",
+                    /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                        __source: {
+                            fileName: "src/pages/AddItem.jsx",
+                            lineNumber: 24
+                        },
+                        __self: undefined
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("label", {
+                        __source: {
+                            fileName: "src/pages/AddItem.jsx",
+                            lineNumber: 25
+                        },
+                        __self: undefined,
+                        children: "Enter Item Price"
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("input", {
+                        type: "text",
+                        name: "price",
+                        value: item.price,
+                        onChange: (e)=>setItem({
+                                ...item,
+                                price: e.target.value
+                            })
+                        ,
+                        __source: {
+                            fileName: "src/pages/AddItem.jsx",
+                            lineNumber: 26
+                        },
+                        __self: undefined
+                    }),
+                    " ",
+                    /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                        __source: {
+                            fileName: "src/pages/AddItem.jsx",
+                            lineNumber: 26
+                        },
+                        __self: undefined
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                        type: "submit",
+                        onClick: handleSubmit,
+                        __source: {
+                            fileName: "src/pages/AddItem.jsx",
+                            lineNumber: 28
+                        },
+                        __self: undefined,
+                        children: "Submit"
+                    })
+                ]
+            })
+        ]
+    }));
+}, "OIjOJxUM02USrIjrVGg0SzO77aQ=");
+
+  $parcel$ReactRefreshHelpers$e557.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","../api/item.api":"ctoo1","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"ctoo1":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "addItem", ()=>addItem
+);
+parcelHelpers.export(exports, "fetchItems", ()=>fetchItems
+);
+parcelHelpers.export(exports, "fetchItem", ()=>fetchItem
+);
+parcelHelpers.export(exports, "updateItem", ()=>updateItem
+);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+_axiosDefault.default.defaults.baseURL = 'http://localhost:3000/';
+_axiosDefault.default.defaults.headers.common['authentication'] = localStorage.getItem('authentication');
+const addItem = (itemObj)=>_axiosDefault.default.post(`/items`, itemObj)
+;
+const fetchItems = ()=>_axiosDefault.default.get(`/items`)
+;
+const fetchItem = (id)=>_axiosDefault.default.get(`/items/${id}`)
+;
+const updateItem = (id, itemObj)=>_axiosDefault.default.put(`/items/${id}`, itemObj)
+;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","axios":"iYoWk"}],"igJ33":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$0912 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$0912.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _itemApi = require("../api/item.api");
+var _reactRouterDom = require("react-router-dom");
+var _cartApi = require("../api/cart.api");
+var _s = $RefreshSig$();
+exports.default = Inventory = _s(()=>{
+    _s();
+    const [items, setItems] = _react.useState([]);
+    const match = _reactRouterDom.useMatch('/inventory/:id');
+    const cartId = match.params.id;
+    _react.useEffect(()=>{
+        getItems();
+    }, []);
+    const getItems = ()=>{
+        _itemApi.fetchItems().then((res)=>{
+            setItems(res.data);
+        }).catch((error)=>{
+            console.log(error);
+        });
+    };
+    const add = (name, price)=>{
+        const itemObj = {
+            name: name,
+            price: price
+        };
+        console.log(itemObj);
+        _cartApi.addToCart(cartId, itemObj).then((res)=>{
+            console.log(res);
+        });
+    };
+    return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
+        __source: {
+            fileName: "src/pages/Inventory.jsx",
+            lineNumber: 35
+        },
+        __self: undefined,
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsx("h2", {
+                __source: {
+                    fileName: "src/pages/Inventory.jsx",
+                    lineNumber: 36
+                },
+                __self: undefined,
+                children: "Inventory"
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsxs("table", {
+                __source: {
+                    fileName: "src/pages/Inventory.jsx",
+                    lineNumber: 37
+                },
+                __self: undefined,
+                children: [
+                    /*#__PURE__*/ _jsxRuntime.jsxs("thead", {
+                        __source: {
+                            fileName: "src/pages/Inventory.jsx",
+                            lineNumber: 38
+                        },
+                        __self: undefined,
+                        children: [
+                            /*#__PURE__*/ _jsxRuntime.jsx("th", {
+                                __source: {
+                                    fileName: "src/pages/Inventory.jsx",
+                                    lineNumber: 39
+                                },
+                                __self: undefined,
+                                children: "Name"
+                            }),
+                            /*#__PURE__*/ _jsxRuntime.jsx("th", {
+                                __source: {
+                                    fileName: "src/pages/Inventory.jsx",
+                                    lineNumber: 40
+                                },
+                                __self: undefined,
+                                children: "Price"
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("tbody", {
+                        __source: {
+                            fileName: "src/pages/Inventory.jsx",
+                            lineNumber: 42
+                        },
+                        __self: undefined,
+                        children: items.map((row)=>/*#__PURE__*/ _jsxRuntime.jsxs("tr", {
+                                __source: {
+                                    fileName: "src/pages/Inventory.jsx",
+                                    lineNumber: 45
+                                },
+                                __self: undefined,
+                                children: [
+                                    /*#__PURE__*/ _jsxRuntime.jsx("td", {
+                                        __source: {
+                                            fileName: "src/pages/Inventory.jsx",
+                                            lineNumber: 46
+                                        },
+                                        __self: undefined,
+                                        children: row.name
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsx("td", {
+                                        __source: {
+                                            fileName: "src/pages/Inventory.jsx",
+                                            lineNumber: 47
+                                        },
+                                        __self: undefined,
+                                        children: row.price
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsx("td", {
+                                        __source: {
+                                            fileName: "src/pages/Inventory.jsx",
+                                            lineNumber: 48
+                                        },
+                                        __self: undefined,
+                                        children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                                            onClick: ()=>add(row.name, row.price)
+                                            ,
+                                            __source: {
+                                                fileName: "src/pages/Inventory.jsx",
+                                                lineNumber: 49
+                                            },
+                                            __self: undefined,
+                                            children: "Add Item"
+                                        })
+                                    })
+                                ]
+                            })
+                        )
+                    })
+                ]
+            })
+        ]
+    }));
+}, "kpn3TG4utNgCyJUCQyowxN4uF0Y=", false, function() {
+    return [_reactRouterDom.useMatch];
+});
+
+  $parcel$ReactRefreshHelpers$0912.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","../api/item.api":"ctoo1","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","react-router-dom":"kjA5T","../api/cart.api":"9TmVl"}],"9TmVl":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "createCart", ()=>createCart
+);
+parcelHelpers.export(exports, "fetchCarts", ()=>fetchCarts
+);
+parcelHelpers.export(exports, "fetchCart", ()=>fetchCart
+);
+parcelHelpers.export(exports, "addToCart", ()=>addToCart
+);
+parcelHelpers.export(exports, "purchase", ()=>purchase
+);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+_axiosDefault.default.defaults.baseURL = 'http://localhost:3000/';
+_axiosDefault.default.defaults.headers.common['authentication'] = localStorage.getItem('authentication');
+const createCart = (cartObj)=>_axiosDefault.default.post(`/carts`, cartObj)
+;
+const fetchCarts = ()=>_axiosDefault.default.get(`/carts`)
+;
+const fetchCart = (id)=>_axiosDefault.default.get(`/carts/${id}`)
+;
+const addToCart = (id, itemObj)=>_axiosDefault.default.put(`/carts/${id}`, itemObj)
+;
+const purchase = (id)=>_axiosDefault.default.get(`/items/${id}`)
+;
+
+},{"axios":"iYoWk","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"2NY0U":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b59f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b59f.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _cartApi = require("../api/cart.api");
+var _s = $RefreshSig$();
+exports.default = CreateCart = _s(()=>{
+    _s();
+    const [cart, setCart] = _react.useState({
+        id: "",
+        name: "",
+        items: []
+    });
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+        let cartId = new Date().getTime().toString(36);
+        cart.id = cartId;
+        _cartApi.createCart(cart).then((res)=>{
+            console.log(res);
+            window.location = `/inventory/${cartId}`;
+        }).catch((error)=>{
+            console.log(error);
+        });
+    };
+    return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
+        __source: {
+            fileName: "src/pages/CreateCart.jsx",
+            lineNumber: 23
+        },
+        __self: undefined,
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsx("h2", {
+                __source: {
+                    fileName: "src/pages/CreateCart.jsx",
+                    lineNumber: 24
+                },
+                __self: undefined,
+                children: "Create Cart"
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsxs("form", {
+                __source: {
+                    fileName: "src/pages/CreateCart.jsx",
+                    lineNumber: 25
+                },
+                __self: undefined,
+                children: [
+                    /*#__PURE__*/ _jsxRuntime.jsx("label", {
+                        __source: {
+                            fileName: "src/pages/CreateCart.jsx",
+                            lineNumber: 26
+                        },
+                        __self: undefined,
+                        children: "Enter Cart name"
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("input", {
+                        type: "text",
+                        name: "name",
+                        value: cart.name,
+                        onChange: (e)=>setCart({
+                                ...cart,
+                                name: e.target.value
+                            })
+                        ,
+                        __source: {
+                            fileName: "src/pages/CreateCart.jsx",
+                            lineNumber: 27
+                        },
+                        __self: undefined
+                    }),
+                    " ",
+                    /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                        __source: {
+                            fileName: "src/pages/CreateCart.jsx",
+                            lineNumber: 27
+                        },
+                        __self: undefined
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                        type: "submit",
+                        onClick: handleSubmit,
+                        __source: {
+                            fileName: "src/pages/CreateCart.jsx",
+                            lineNumber: 29
+                        },
+                        __self: undefined,
+                        children: "Submit"
+                    })
+                ]
+            })
+        ]
+    }));
+}, "SAdtJPF9Agspc232HFqL1j59LUU=");
+
+  $parcel$ReactRefreshHelpers$b59f.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","../api/cart.api":"9TmVl","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}]},["2rAXy","l0CE5","e84fU"], "e84fU", "parcelRequire10c2")
 
 //# sourceMappingURL=index.b44a5685.js.map
