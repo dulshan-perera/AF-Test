@@ -13,7 +13,7 @@ export default CreateCart = () =>{
         cart.id = cartId;
         createCart(cart).then((res) =>{
             console.log(res)
-            window.location=`/inventory/${cartId}`
+            window.location=`/inventory/${cartId}/:listid`
         }).catch((error) =>{
             console.log(error)
         })
