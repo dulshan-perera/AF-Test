@@ -12,8 +12,11 @@ export default EditItem = () =>{
 
     const handleSubmit = (e) =>{
         e.preventDefault();
+        const updatedPrice = parseInt(item.price)
+        item.price = updatedPrice;
         updateItem(itemId, item).then((res) =>{
             console.log(res)
+            window.location = '/inventory/:cartid/:listid'
         }).catch((error) =>{
             console.log(error)
         })

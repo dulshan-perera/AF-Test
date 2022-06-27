@@ -1,5 +1,5 @@
 import Router from '@koa/router';
-import { fetchUser } from '../api/user.api.js';
+import { fetchCustomers, fetchUser } from '../api/user.api.js';
 
 const router = new Router({
     prefix:'/users'
@@ -11,4 +11,15 @@ router.get('/:id', async ctx =>{
     ctx.body = await fetchUser(id);
 })
 
+//fetchCustomers
+router.get('/customers/:role', async ctx =>{
+    let role = ctx.params.role;
+    const result = await fetchCustomers(role);
+    try{
+        ctx.response.status = 200;
+        ctx.body = result;
+    }catch(e){
+        throw new Error("Failed fetching customers!");
+    }
+})
 export default router;

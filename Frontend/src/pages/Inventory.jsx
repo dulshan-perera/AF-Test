@@ -14,16 +14,14 @@ export default Inventory = () =>{
     const listId = match.params.listid
 
     useEffect(() =>{
-        if(!localStorage.authentication){
-            setRole(getAuth(localStorage.authentication).role)
-        }
         getItems();
-        console.log(cartId)
+        console.log(items)
     }, [])
 
     const getItems = () =>{
         fetchItems().then((res) =>{
             setItems(res.data);
+            console.log(res.data.itemObj)
         }).catch((error) =>{
             console.log(error);
         })
@@ -47,7 +45,7 @@ export default Inventory = () =>{
     }
 
     const edit = (id) =>{
-        window.locaiton = `/item/${id}`
+        window.location = `/item/${id}`
     }
 
     const viewCart = () =>{

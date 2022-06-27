@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { addItem } from "../api/item.api";
 
 export default AddItem = () =>{
@@ -9,6 +9,8 @@ export default AddItem = () =>{
 
     const handleSubmit = (e) =>{
         e.preventDefault();
+        const convereted = parseInt(item.price)
+        item.price = convereted;
         addItem(item).then((res) =>{
             console.log(res)
         }).catch((error) =>{
