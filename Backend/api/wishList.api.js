@@ -3,8 +3,6 @@ import { save, getAll, getById, add } from '../dal/wishList.dao.js';
 
 //create list
 const createWishList = async(list) =>{
-    const id = uuidv4();
-    list.id = id;
     return await save(list);
 }
 

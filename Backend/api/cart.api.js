@@ -3,8 +3,6 @@ import { save, getAll, getById, add } from '../dal/cart.dao.js';
 
 //create cart
 const createCart = async(cart) =>{
-    const id = uuidv4();
-    cart.id = id;
     return await save(cart);
 }
 
