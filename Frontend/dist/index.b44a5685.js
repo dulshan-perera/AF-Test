@@ -946,12 +946,30 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactDom = require("react-dom");
 var _app = require("./App");
 var _appDefault = parcelHelpers.interopDefault(_app);
-_reactDom.render(/*#__PURE__*/ _jsxRuntime.jsx(_appDefault.default, {
+var _nav = require("./src/pages/Nav");
+var _navDefault = parcelHelpers.interopDefault(_nav);
+_reactDom.render(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
     __source: {
         fileName: "index.jsx",
-        lineNumber: 5
+        lineNumber: 6
     },
-    __self: undefined
+    __self: undefined,
+    children: [
+        /*#__PURE__*/ _jsxRuntime.jsx(_navDefault.default, {
+            __source: {
+                fileName: "index.jsx",
+                lineNumber: 7
+            },
+            __self: undefined
+        }),
+        /*#__PURE__*/ _jsxRuntime.jsx(_appDefault.default, {
+            __source: {
+                fileName: "index.jsx",
+                lineNumber: 8
+            },
+            __self: undefined
+        })
+    ]
 }), document.getElementById('app'));
 
   $parcel$ReactRefreshHelpers$7615.postlude(module);
@@ -959,7 +977,7 @@ _reactDom.render(/*#__PURE__*/ _jsxRuntime.jsx(_appDefault.default, {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-dom":"gkWJK","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","./App":"el071"}],"8xIwr":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-dom":"gkWJK","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","./App":"el071","./src/pages/Nav":"ilzJE"}],"8xIwr":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-runtime.development.js');
 
@@ -25414,6 +25432,8 @@ var _registerUser = require("./src/pages/RegisterUser");
 var _registerUserDefault = parcelHelpers.interopDefault(_registerUser);
 var _viewCart = require("./src/pages/ViewCart");
 var _viewCartDefault = parcelHelpers.interopDefault(_viewCart);
+var _viewCustomers = require("./src/pages/ViewCustomers");
+var _viewCustomersDefault = parcelHelpers.interopDefault(_viewCustomers);
 var _viewList = require("./src/pages/ViewList");
 var _viewListDefault = parcelHelpers.interopDefault(_viewList);
 var _viewPromotions = require("./src/pages/ViewPromotions");
@@ -25426,13 +25446,13 @@ class App extends _reactDefault.default.Component {
         return(/*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.BrowserRouter, {
             __source: {
                 fileName: "App.jsx",
-                lineNumber: 23
+                lineNumber: 24
             },
             __self: this,
             children: /*#__PURE__*/ _jsxRuntime.jsxs(_reactRouterDom.Routes, {
                 __source: {
                     fileName: "App.jsx",
-                    lineNumber: 24
+                    lineNumber: 25
                 },
                 __self: this,
                 children: [
@@ -25442,7 +25462,7 @@ class App extends _reactDefault.default.Component {
                         }),
                         __source: {
                             fileName: "App.jsx",
-                            lineNumber: 25
+                            lineNumber: 26
                         },
                         __self: this
                     }),
@@ -25452,7 +25472,7 @@ class App extends _reactDefault.default.Component {
                         }),
                         __source: {
                             fileName: "App.jsx",
-                            lineNumber: 26
+                            lineNumber: 27
                         },
                         __self: this
                     }),
@@ -25462,27 +25482,7 @@ class App extends _reactDefault.default.Component {
                         }),
                         __source: {
                             fileName: "App.jsx",
-                            lineNumber: 27
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/add-item",
-                        element: /*#__PURE__*/ _jsxRuntime.jsx(_addItemDefault.default, {
-                        }),
-                        __source: {
-                            fileName: "App.jsx",
                             lineNumber: 28
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/item/:id",
-                        element: /*#__PURE__*/ _jsxRuntime.jsx(_editItemDefault.default, {
-                        }),
-                        __source: {
-                            fileName: "App.jsx",
-                            lineNumber: 29
                         },
                         __self: this
                     }),
@@ -25492,57 +25492,7 @@ class App extends _reactDefault.default.Component {
                         }),
                         __source: {
                             fileName: "App.jsx",
-                            lineNumber: 30
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/create-cart",
-                        element: /*#__PURE__*/ _jsxRuntime.jsx(_createCartDefault.default, {
-                        }),
-                        __source: {
-                            fileName: "App.jsx",
-                            lineNumber: 31
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/cart/:id",
-                        element: /*#__PURE__*/ _jsxRuntime.jsx(_viewCartDefault.default, {
-                        }),
-                        __source: {
-                            fileName: "App.jsx",
-                            lineNumber: 32
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/list/:id",
-                        element: /*#__PURE__*/ _jsxRuntime.jsx(_viewListDefault.default, {
-                        }),
-                        __source: {
-                            fileName: "App.jsx",
-                            lineNumber: 33
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/create-list",
-                        element: /*#__PURE__*/ _jsxRuntime.jsx(_createListDefault.default, {
-                        }),
-                        __source: {
-                            fileName: "App.jsx",
-                            lineNumber: 34
-                        },
-                        __self: this
-                    }),
-                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
-                        path: "/promotion",
-                        element: /*#__PURE__*/ _jsxRuntime.jsx(_addPromotionDefault.default, {
-                        }),
-                        __source: {
-                            fileName: "App.jsx",
-                            lineNumber: 35
+                            lineNumber: 29
                         },
                         __self: this
                     }),
@@ -25552,7 +25502,87 @@ class App extends _reactDefault.default.Component {
                         }),
                         __source: {
                             fileName: "App.jsx",
-                            lineNumber: 36
+                            lineNumber: 30
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/add-item",
+                        element: /*#__PURE__*/ _jsxRuntime.jsx(_addItemDefault.default, {
+                        }),
+                        __source: {
+                            fileName: "App.jsx",
+                            lineNumber: 32
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/item/:id",
+                        element: /*#__PURE__*/ _jsxRuntime.jsx(_editItemDefault.default, {
+                        }),
+                        __source: {
+                            fileName: "App.jsx",
+                            lineNumber: 33
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/promotion",
+                        element: /*#__PURE__*/ _jsxRuntime.jsx(_addPromotionDefault.default, {
+                        }),
+                        __source: {
+                            fileName: "App.jsx",
+                            lineNumber: 34
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/customers",
+                        element: /*#__PURE__*/ _jsxRuntime.jsx(_viewCustomersDefault.default, {
+                        }),
+                        __source: {
+                            fileName: "App.jsx",
+                            lineNumber: 35
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/create-cart",
+                        element: /*#__PURE__*/ _jsxRuntime.jsx(_createCartDefault.default, {
+                        }),
+                        __source: {
+                            fileName: "App.jsx",
+                            lineNumber: 37
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/cart/:id",
+                        element: /*#__PURE__*/ _jsxRuntime.jsx(_viewCartDefault.default, {
+                        }),
+                        __source: {
+                            fileName: "App.jsx",
+                            lineNumber: 38
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/list/:id",
+                        element: /*#__PURE__*/ _jsxRuntime.jsx(_viewListDefault.default, {
+                        }),
+                        __source: {
+                            fileName: "App.jsx",
+                            lineNumber: 39
+                        },
+                        __self: this
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx(_reactRouterDom.Route, {
+                        path: "/create-list",
+                        element: /*#__PURE__*/ _jsxRuntime.jsx(_createListDefault.default, {
+                        }),
+                        __source: {
+                            fileName: "App.jsx",
+                            lineNumber: 40
                         },
                         __self: this
                     })
@@ -25568,7 +25598,7 @@ exports.default = App;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","./src/pages/Home":"9YG6N","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","react-router-dom":"kjA5T","./src/pages/AddItem":"be8Uo","./src/pages/CreateCart":"2NY0U","./src/pages/Inventory":"igJ33","./src/pages/Login":"7k7KE","./src/pages/RegisterUser":"yC19n","./src/pages/ViewCart":"1B9zb","./src/pages/CreateList":"bZ4FP","./src/pages/ViewList":"7a2Ze","./src/pages/EditItem":"keudP","./src/pages/AddPromotion":"aZCkp","./src/pages/ViewPromotions":"bbcBL"}],"9YG6N":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","./src/pages/Home":"9YG6N","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","react-router-dom":"kjA5T","./src/pages/AddItem":"be8Uo","./src/pages/CreateCart":"2NY0U","./src/pages/Inventory":"igJ33","./src/pages/Login":"7k7KE","./src/pages/RegisterUser":"yC19n","./src/pages/ViewCart":"1B9zb","./src/pages/CreateList":"bZ4FP","./src/pages/ViewList":"7a2Ze","./src/pages/EditItem":"keudP","./src/pages/AddPromotion":"aZCkp","./src/pages/ViewPromotions":"bbcBL","./src/pages/ViewCustomers":"k33b7"}],"9YG6N":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3fce = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -25588,50 +25618,205 @@ exports.default = Home = _s(()=>{
     _react.useEffect(()=>{
         if (localStorage.authentication !== null) setRole(_auth.getAuth(localStorage.authentication).role);
     });
-    return role === 'customer' ? /*#__PURE__*/ _jsxRuntime.jsx("div", {
+    const nav = (type)=>{
+        switch(type){
+            case 'addToCart':
+                window.location = '/create-cart';
+                break;
+            case 'addToList':
+                window.location = '/create-list';
+                break;
+            case 'viewPromotions':
+                window.location = '/promotions';
+                break;
+            case 'viewCart':
+                window.location = '/cart/:id';
+                break;
+            case 'viewList':
+                window.location = '/list/:id';
+                break;
+            case 'addItems':
+                window.location = '/add-item';
+                break;
+            case 'addPromotions':
+                window.location = '/promotion';
+                break;
+            case 'viewPromotions':
+                window.location = '/promotions';
+                break;
+            case 'viewPromotions':
+                window.location = '/promotions';
+                break;
+            case 'viewCustomers':
+                window.location = '/customers';
+                break;
+            default:
+        }
+    };
+    return role === 'customer' ? /*#__PURE__*/ _jsxRuntime.jsxs("div", {
         __source: {
             fileName: "src/pages/Home.jsx",
-            lineNumber: 12
+            lineNumber: 48
         },
         __self: undefined,
-        children: /*#__PURE__*/ _jsxRuntime.jsxs("h2", {
-            __source: {
-                fileName: "src/pages/Home.jsx",
-                lineNumber: 13
-            },
-            __self: undefined,
-            children: [
-                "Welcome Home ",
-                role
-            ]
-        })
-    }) : role === 'trader' ? /*#__PURE__*/ _jsxRuntime.jsx("div", {
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsxs("h2", {
+                __source: {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 49
+                },
+                __self: undefined,
+                children: [
+                    "Welcome Home ",
+                    role
+                ]
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                onClick: ()=>nav('addToCart')
+                ,
+                __source: {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 50
+                },
+                __self: undefined,
+                children: "Create Cart & Add Items"
+            }),
+            " ",
+            /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                __source: {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 50
+                },
+                __self: undefined
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                onClick: ()=>nav('addToList')
+                ,
+                __source: {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 51
+                },
+                __self: undefined,
+                children: "Create WishList & Add Items"
+            }),
+            " ",
+            /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                __source: {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 51
+                },
+                __self: undefined
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                onClick: ()=>nav('viewPromotions')
+                ,
+                __source: {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 52
+                },
+                __self: undefined,
+                children: "View Promotions"
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                __source: {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 52
+                },
+                __self: undefined
+            })
+        ]
+    }) : role === 'trader' ? /*#__PURE__*/ _jsxRuntime.jsxs("div", {
         __source: {
             fileName: "src/pages/Home.jsx",
-            lineNumber: 17
+            lineNumber: 56
         },
         __self: undefined,
-        children: /*#__PURE__*/ _jsxRuntime.jsxs("h2", {
-            __source: {
-                fileName: "src/pages/Home.jsx",
-                lineNumber: 18
-            },
-            __self: undefined,
-            children: [
-                "Welcome Home ",
-                role
-            ]
-        })
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsxs("h2", {
+                __source: {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 57
+                },
+                __self: undefined,
+                children: [
+                    "Welcome Home ",
+                    role
+                ]
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                onClick: ()=>nav('addItems')
+                ,
+                __source: {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 58
+                },
+                __self: undefined,
+                children: "Add Items"
+            }),
+            " ",
+            /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                __source: {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 58
+                },
+                __self: undefined
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                onClick: ()=>nav('addPromotions')
+                ,
+                __source: {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 59
+                },
+                __self: undefined,
+                children: "Add Promotions"
+            }),
+            " ",
+            /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                __source: {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 59
+                },
+                __self: undefined
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                onClick: ()=>nav('viewPromotions')
+                ,
+                __source: {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 60
+                },
+                __self: undefined,
+                children: "View Promotions"
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                __source: {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 60
+                },
+                __self: undefined
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                onClick: ()=>nav('viewCustomers')
+                ,
+                __source: {
+                    fileName: "src/pages/Home.jsx",
+                    lineNumber: 61
+                },
+                __self: undefined,
+                children: "View Customers"
+            })
+        ]
     }) : /*#__PURE__*/ _jsxRuntime.jsx("div", {
         __source: {
             fileName: "src/pages/Home.jsx",
-            lineNumber: 22
+            lineNumber: 65
         },
         __self: undefined,
         children: /*#__PURE__*/ _jsxRuntime.jsx("h2", {
             __source: {
                 fileName: "src/pages/Home.jsx",
-                lineNumber: 23
+                lineNumber: 66
             },
             __self: undefined,
             children: "Loading....."
@@ -27546,12 +27731,14 @@ var _itemApi = require("../api/item.api");
 var _s = $RefreshSig$();
 exports.default = AddItem = _s(()=>{
     _s();
-    const [item, setItem] = useState({
+    const [item, setItem] = _react.useState({
         name: "",
         price: ""
     });
     const handleSubmit = (e)=>{
         e.preventDefault();
+        const convereted = parseInt(item.price);
+        item.price = convereted;
         _itemApi.addItem(item).then((res)=>{
             console.log(res);
         }).catch((error)=>{
@@ -27561,14 +27748,14 @@ exports.default = AddItem = _s(()=>{
     return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
         __source: {
             fileName: "src/pages/AddItem.jsx",
-            lineNumber: 20
+            lineNumber: 22
         },
         __self: undefined,
         children: [
             /*#__PURE__*/ _jsxRuntime.jsx("h2", {
                 __source: {
                     fileName: "src/pages/AddItem.jsx",
-                    lineNumber: 21
+                    lineNumber: 23
                 },
                 __self: undefined,
                 children: "Add Item"
@@ -27576,14 +27763,14 @@ exports.default = AddItem = _s(()=>{
             /*#__PURE__*/ _jsxRuntime.jsxs("form", {
                 __source: {
                     fileName: "src/pages/AddItem.jsx",
-                    lineNumber: 22
+                    lineNumber: 24
                 },
                 __self: undefined,
                 children: [
                     /*#__PURE__*/ _jsxRuntime.jsx("label", {
                         __source: {
                             fileName: "src/pages/AddItem.jsx",
-                            lineNumber: 23
+                            lineNumber: 25
                         },
                         __self: undefined,
                         children: "Enter Item name"
@@ -27599,7 +27786,7 @@ exports.default = AddItem = _s(()=>{
                         ,
                         __source: {
                             fileName: "src/pages/AddItem.jsx",
-                            lineNumber: 24
+                            lineNumber: 26
                         },
                         __self: undefined
                     }),
@@ -27607,14 +27794,14 @@ exports.default = AddItem = _s(()=>{
                     /*#__PURE__*/ _jsxRuntime.jsx("br", {
                         __source: {
                             fileName: "src/pages/AddItem.jsx",
-                            lineNumber: 24
+                            lineNumber: 26
                         },
                         __self: undefined
                     }),
                     /*#__PURE__*/ _jsxRuntime.jsx("label", {
                         __source: {
                             fileName: "src/pages/AddItem.jsx",
-                            lineNumber: 25
+                            lineNumber: 27
                         },
                         __self: undefined,
                         children: "Enter Item Price"
@@ -27630,7 +27817,7 @@ exports.default = AddItem = _s(()=>{
                         ,
                         __source: {
                             fileName: "src/pages/AddItem.jsx",
-                            lineNumber: 26
+                            lineNumber: 28
                         },
                         __self: undefined
                     }),
@@ -27638,7 +27825,7 @@ exports.default = AddItem = _s(()=>{
                     /*#__PURE__*/ _jsxRuntime.jsx("br", {
                         __source: {
                             fileName: "src/pages/AddItem.jsx",
-                            lineNumber: 26
+                            lineNumber: 28
                         },
                         __self: undefined
                     }),
@@ -27647,7 +27834,7 @@ exports.default = AddItem = _s(()=>{
                         onClick: handleSubmit,
                         __source: {
                             fileName: "src/pages/AddItem.jsx",
-                            lineNumber: 28
+                            lineNumber: 30
                         },
                         __self: undefined,
                         children: "Submit"
@@ -31035,13 +31222,13 @@ exports.default = Inventory = _s(()=>{
     const cartId = match.params.cartid;
     const listId = match.params.listid;
     _react.useEffect(()=>{
-        if (!localStorage.authentication) setRole(_auth.getAuth(localStorage.authentication).role);
         getItems();
-        console.log(cartId);
+        console.log(items);
     }, []);
     const getItems = ()=>{
         _itemApi.fetchItems().then((res)=>{
             setItems(res.data);
+            console.log(res.data.itemObj);
         }).catch((error)=>{
             console.log(error);
         });
@@ -31061,7 +31248,7 @@ exports.default = Inventory = _s(()=>{
         });
     };
     const edit = (id)=>{
-        window.locaiton = `/item/${id}`;
+        window.location = `/item/${id}`;
     };
     const viewCart = ()=>{
         window.location = `/cart/${cartId}`;
@@ -31072,14 +31259,14 @@ exports.default = Inventory = _s(()=>{
     return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
         __source: {
             fileName: "src/pages/Inventory.jsx",
-            lineNumber: 61
+            lineNumber: 59
         },
         __self: undefined,
         children: [
             /*#__PURE__*/ _jsxRuntime.jsx("h2", {
                 __source: {
                     fileName: "src/pages/Inventory.jsx",
-                    lineNumber: 62
+                    lineNumber: 60
                 },
                 __self: undefined,
                 children: "Inventory"
@@ -31091,7 +31278,7 @@ exports.default = Inventory = _s(()=>{
                         ,
                         __source: {
                             fileName: "src/pages/Inventory.jsx",
-                            lineNumber: 68
+                            lineNumber: 66
                         },
                         __self: undefined,
                         children: "ViewCart"
@@ -31100,21 +31287,21 @@ exports.default = Inventory = _s(()=>{
                     /*#__PURE__*/ _jsxRuntime.jsxs("table", {
                         __source: {
                             fileName: "src/pages/Inventory.jsx",
-                            lineNumber: 71
+                            lineNumber: 69
                         },
                         __self: undefined,
                         children: [
                             /*#__PURE__*/ _jsxRuntime.jsxs("thead", {
                                 __source: {
                                     fileName: "src/pages/Inventory.jsx",
-                                    lineNumber: 72
+                                    lineNumber: 70
                                 },
                                 __self: undefined,
                                 children: [
                                     /*#__PURE__*/ _jsxRuntime.jsx("th", {
                                         __source: {
                                             fileName: "src/pages/Inventory.jsx",
-                                            lineNumber: 73
+                                            lineNumber: 71
                                         },
                                         __self: undefined,
                                         children: "Name"
@@ -31122,7 +31309,7 @@ exports.default = Inventory = _s(()=>{
                                     /*#__PURE__*/ _jsxRuntime.jsx("th", {
                                         __source: {
                                             fileName: "src/pages/Inventory.jsx",
-                                            lineNumber: 74
+                                            lineNumber: 72
                                         },
                                         __self: undefined,
                                         children: "Price"
@@ -31132,20 +31319,20 @@ exports.default = Inventory = _s(()=>{
                             /*#__PURE__*/ _jsxRuntime.jsx("tbody", {
                                 __source: {
                                     fileName: "src/pages/Inventory.jsx",
-                                    lineNumber: 76
+                                    lineNumber: 74
                                 },
                                 __self: undefined,
                                 children: items.map((row)=>/*#__PURE__*/ _jsxRuntime.jsxs("tr", {
                                         __source: {
                                             fileName: "src/pages/Inventory.jsx",
-                                            lineNumber: 79
+                                            lineNumber: 77
                                         },
                                         __self: undefined,
                                         children: [
                                             /*#__PURE__*/ _jsxRuntime.jsx("td", {
                                                 __source: {
                                                     fileName: "src/pages/Inventory.jsx",
-                                                    lineNumber: 80
+                                                    lineNumber: 78
                                                 },
                                                 __self: undefined,
                                                 children: row.name
@@ -31153,7 +31340,7 @@ exports.default = Inventory = _s(()=>{
                                             /*#__PURE__*/ _jsxRuntime.jsx("td", {
                                                 __source: {
                                                     fileName: "src/pages/Inventory.jsx",
-                                                    lineNumber: 81
+                                                    lineNumber: 79
                                                 },
                                                 __self: undefined,
                                                 children: row.price
@@ -31161,7 +31348,7 @@ exports.default = Inventory = _s(()=>{
                                             /*#__PURE__*/ _jsxRuntime.jsx("td", {
                                                 __source: {
                                                     fileName: "src/pages/Inventory.jsx",
-                                                    lineNumber: 82
+                                                    lineNumber: 80
                                                 },
                                                 __self: undefined,
                                                 children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
@@ -31169,7 +31356,7 @@ exports.default = Inventory = _s(()=>{
                                                     ,
                                                     __source: {
                                                         fileName: "src/pages/Inventory.jsx",
-                                                        lineNumber: 83
+                                                        lineNumber: 81
                                                     },
                                                     __self: undefined,
                                                     children: "Add Item"
@@ -31189,7 +31376,7 @@ exports.default = Inventory = _s(()=>{
                         ,
                         __source: {
                             fileName: "src/pages/Inventory.jsx",
-                            lineNumber: 94
+                            lineNumber: 92
                         },
                         __self: undefined,
                         children: "View List"
@@ -31198,21 +31385,21 @@ exports.default = Inventory = _s(()=>{
                     /*#__PURE__*/ _jsxRuntime.jsxs("table", {
                         __source: {
                             fileName: "src/pages/Inventory.jsx",
-                            lineNumber: 97
+                            lineNumber: 95
                         },
                         __self: undefined,
                         children: [
                             /*#__PURE__*/ _jsxRuntime.jsxs("thead", {
                                 __source: {
                                     fileName: "src/pages/Inventory.jsx",
-                                    lineNumber: 98
+                                    lineNumber: 96
                                 },
                                 __self: undefined,
                                 children: [
                                     /*#__PURE__*/ _jsxRuntime.jsx("th", {
                                         __source: {
                                             fileName: "src/pages/Inventory.jsx",
-                                            lineNumber: 99
+                                            lineNumber: 97
                                         },
                                         __self: undefined,
                                         children: "Name"
@@ -31220,7 +31407,7 @@ exports.default = Inventory = _s(()=>{
                                     /*#__PURE__*/ _jsxRuntime.jsx("th", {
                                         __source: {
                                             fileName: "src/pages/Inventory.jsx",
-                                            lineNumber: 100
+                                            lineNumber: 98
                                         },
                                         __self: undefined,
                                         children: "Price"
@@ -31230,20 +31417,20 @@ exports.default = Inventory = _s(()=>{
                             /*#__PURE__*/ _jsxRuntime.jsx("tbody", {
                                 __source: {
                                     fileName: "src/pages/Inventory.jsx",
-                                    lineNumber: 102
+                                    lineNumber: 100
                                 },
                                 __self: undefined,
                                 children: items.map((row)=>/*#__PURE__*/ _jsxRuntime.jsxs("tr", {
                                         __source: {
                                             fileName: "src/pages/Inventory.jsx",
-                                            lineNumber: 105
+                                            lineNumber: 103
                                         },
                                         __self: undefined,
                                         children: [
                                             /*#__PURE__*/ _jsxRuntime.jsx("td", {
                                                 __source: {
                                                     fileName: "src/pages/Inventory.jsx",
-                                                    lineNumber: 106
+                                                    lineNumber: 104
                                                 },
                                                 __self: undefined,
                                                 children: row.name
@@ -31251,7 +31438,7 @@ exports.default = Inventory = _s(()=>{
                                             /*#__PURE__*/ _jsxRuntime.jsx("td", {
                                                 __source: {
                                                     fileName: "src/pages/Inventory.jsx",
-                                                    lineNumber: 107
+                                                    lineNumber: 105
                                                 },
                                                 __self: undefined,
                                                 children: row.price
@@ -31259,7 +31446,7 @@ exports.default = Inventory = _s(()=>{
                                             /*#__PURE__*/ _jsxRuntime.jsx("td", {
                                                 __source: {
                                                     fileName: "src/pages/Inventory.jsx",
-                                                    lineNumber: 108
+                                                    lineNumber: 106
                                                 },
                                                 __self: undefined,
                                                 children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
@@ -31267,7 +31454,7 @@ exports.default = Inventory = _s(()=>{
                                                     ,
                                                     __source: {
                                                         fileName: "src/pages/Inventory.jsx",
-                                                        lineNumber: 109
+                                                        lineNumber: 107
                                                     },
                                                     __self: undefined,
                                                     children: "Add Item"
@@ -31284,21 +31471,21 @@ exports.default = Inventory = _s(()=>{
                 children: /*#__PURE__*/ _jsxRuntime.jsxs("table", {
                     __source: {
                         fileName: "src/pages/Inventory.jsx",
-                        lineNumber: 118
+                        lineNumber: 116
                     },
                     __self: undefined,
                     children: [
                         /*#__PURE__*/ _jsxRuntime.jsxs("thead", {
                             __source: {
                                 fileName: "src/pages/Inventory.jsx",
-                                lineNumber: 119
+                                lineNumber: 117
                             },
                             __self: undefined,
                             children: [
                                 /*#__PURE__*/ _jsxRuntime.jsx("th", {
                                     __source: {
                                         fileName: "src/pages/Inventory.jsx",
-                                        lineNumber: 120
+                                        lineNumber: 118
                                     },
                                     __self: undefined,
                                     children: "Name"
@@ -31306,7 +31493,7 @@ exports.default = Inventory = _s(()=>{
                                 /*#__PURE__*/ _jsxRuntime.jsx("th", {
                                     __source: {
                                         fileName: "src/pages/Inventory.jsx",
-                                        lineNumber: 121
+                                        lineNumber: 119
                                     },
                                     __self: undefined,
                                     children: "Price"
@@ -31316,20 +31503,20 @@ exports.default = Inventory = _s(()=>{
                         /*#__PURE__*/ _jsxRuntime.jsx("tbody", {
                             __source: {
                                 fileName: "src/pages/Inventory.jsx",
-                                lineNumber: 123
+                                lineNumber: 121
                             },
                             __self: undefined,
                             children: items.map((row)=>/*#__PURE__*/ _jsxRuntime.jsxs("tr", {
                                     __source: {
                                         fileName: "src/pages/Inventory.jsx",
-                                        lineNumber: 126
+                                        lineNumber: 124
                                     },
                                     __self: undefined,
                                     children: [
                                         /*#__PURE__*/ _jsxRuntime.jsx("td", {
                                             __source: {
                                                 fileName: "src/pages/Inventory.jsx",
-                                                lineNumber: 127
+                                                lineNumber: 125
                                             },
                                             __self: undefined,
                                             children: row.name
@@ -31337,7 +31524,7 @@ exports.default = Inventory = _s(()=>{
                                         /*#__PURE__*/ _jsxRuntime.jsx("td", {
                                             __source: {
                                                 fileName: "src/pages/Inventory.jsx",
-                                                lineNumber: 128
+                                                lineNumber: 126
                                             },
                                             __self: undefined,
                                             children: row.price
@@ -31345,7 +31532,7 @@ exports.default = Inventory = _s(()=>{
                                         /*#__PURE__*/ _jsxRuntime.jsx("td", {
                                             __source: {
                                                 fileName: "src/pages/Inventory.jsx",
-                                                lineNumber: 129
+                                                lineNumber: 127
                                             },
                                             __self: undefined,
                                             children: /*#__PURE__*/ _jsxRuntime.jsx("button", {
@@ -31353,7 +31540,7 @@ exports.default = Inventory = _s(()=>{
                                                 ,
                                                 __source: {
                                                     fileName: "src/pages/Inventory.jsx",
-                                                    lineNumber: 130
+                                                    lineNumber: 128
                                                 },
                                                 __self: undefined,
                                                 children: "Edit Item"
@@ -32233,8 +32420,11 @@ exports.default = EditItem = _s(()=>{
     });
     const handleSubmit = (e)=>{
         e.preventDefault();
+        const updatedPrice = parseInt(item.price);
+        item.price = updatedPrice;
         _itemApi.updateItem(itemId, item).then((res)=>{
             console.log(res);
+            window.location = '/inventory/:cartid/:listid';
         }).catch((error)=>{
             console.log(error);
         });
@@ -32242,14 +32432,14 @@ exports.default = EditItem = _s(()=>{
     return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
         __source: {
             fileName: "src/pages/EditItem.jsx",
-            lineNumber: 23
+            lineNumber: 26
         },
         __self: undefined,
         children: [
             /*#__PURE__*/ _jsxRuntime.jsx("h2", {
                 __source: {
                     fileName: "src/pages/EditItem.jsx",
-                    lineNumber: 24
+                    lineNumber: 27
                 },
                 __self: undefined,
                 children: "Edit Item"
@@ -32257,14 +32447,14 @@ exports.default = EditItem = _s(()=>{
             /*#__PURE__*/ _jsxRuntime.jsxs("form", {
                 __source: {
                     fileName: "src/pages/EditItem.jsx",
-                    lineNumber: 25
+                    lineNumber: 28
                 },
                 __self: undefined,
                 children: [
                     /*#__PURE__*/ _jsxRuntime.jsx("label", {
                         __source: {
                             fileName: "src/pages/EditItem.jsx",
-                            lineNumber: 26
+                            lineNumber: 29
                         },
                         __self: undefined,
                         children: "Enter Item name"
@@ -32280,7 +32470,7 @@ exports.default = EditItem = _s(()=>{
                         ,
                         __source: {
                             fileName: "src/pages/EditItem.jsx",
-                            lineNumber: 27
+                            lineNumber: 30
                         },
                         __self: undefined
                     }),
@@ -32288,14 +32478,14 @@ exports.default = EditItem = _s(()=>{
                     /*#__PURE__*/ _jsxRuntime.jsx("br", {
                         __source: {
                             fileName: "src/pages/EditItem.jsx",
-                            lineNumber: 27
+                            lineNumber: 30
                         },
                         __self: undefined
                     }),
                     /*#__PURE__*/ _jsxRuntime.jsx("label", {
                         __source: {
                             fileName: "src/pages/EditItem.jsx",
-                            lineNumber: 28
+                            lineNumber: 31
                         },
                         __self: undefined,
                         children: "Enter Item Price"
@@ -32311,7 +32501,7 @@ exports.default = EditItem = _s(()=>{
                         ,
                         __source: {
                             fileName: "src/pages/EditItem.jsx",
-                            lineNumber: 29
+                            lineNumber: 32
                         },
                         __self: undefined
                     }),
@@ -32319,7 +32509,7 @@ exports.default = EditItem = _s(()=>{
                     /*#__PURE__*/ _jsxRuntime.jsx("br", {
                         __source: {
                             fileName: "src/pages/EditItem.jsx",
-                            lineNumber: 29
+                            lineNumber: 32
                         },
                         __self: undefined
                     }),
@@ -32328,7 +32518,7 @@ exports.default = EditItem = _s(()=>{
                         onClick: handleSubmit,
                         __source: {
                             fileName: "src/pages/EditItem.jsx",
-                            lineNumber: 31
+                            lineNumber: 34
                         },
                         __self: undefined,
                         children: "Update"
@@ -32618,6 +32808,254 @@ exports.default = ViewPromotions = _s(()=>{
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","../api/promotion.api":"3nwB1","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}]},["2rAXy","l0CE5","e84fU"], "e84fU", "parcelRequire10c2")
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","../api/promotion.api":"3nwB1","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"k33b7":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b3e6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b3e6.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _userApi = require("../api/user.api");
+var _s = $RefreshSig$();
+exports.default = ViewCustomers = _s(()=>{
+    _s();
+    const [customers, setCustomers] = _react.useState([]);
+    const role = 'customer';
+    _react.useEffect(()=>{
+        getCustomers();
+    }, []);
+    const getCustomers = ()=>{
+        _userApi.fetchCustomers(role).then((res)=>{
+            setCustomers(res.data);
+        }).catch((err)=>{
+            console.log(err);
+        });
+    };
+    return(/*#__PURE__*/ _jsxRuntime.jsxs("div", {
+        __source: {
+            fileName: "src/pages/ViewCustomers.jsx",
+            lineNumber: 20
+        },
+        __self: undefined,
+        children: [
+            /*#__PURE__*/ _jsxRuntime.jsx("h2", {
+                __source: {
+                    fileName: "src/pages/ViewCustomers.jsx",
+                    lineNumber: 21
+                },
+                __self: undefined,
+                children: "View Customers"
+            }),
+            /*#__PURE__*/ _jsxRuntime.jsxs("table", {
+                __source: {
+                    fileName: "src/pages/ViewCustomers.jsx",
+                    lineNumber: 22
+                },
+                __self: undefined,
+                children: [
+                    /*#__PURE__*/ _jsxRuntime.jsxs("thead", {
+                        __source: {
+                            fileName: "src/pages/ViewCustomers.jsx",
+                            lineNumber: 23
+                        },
+                        __self: undefined,
+                        children: [
+                            /*#__PURE__*/ _jsxRuntime.jsx("th", {
+                                __source: {
+                                    fileName: "src/pages/ViewCustomers.jsx",
+                                    lineNumber: 24
+                                },
+                                __self: undefined,
+                                children: "Name"
+                            }),
+                            /*#__PURE__*/ _jsxRuntime.jsx("th", {
+                                __source: {
+                                    fileName: "src/pages/ViewCustomers.jsx",
+                                    lineNumber: 25
+                                },
+                                __self: undefined,
+                                children: "Phone"
+                            }),
+                            /*#__PURE__*/ _jsxRuntime.jsx("th", {
+                                __source: {
+                                    fileName: "src/pages/ViewCustomers.jsx",
+                                    lineNumber: 26
+                                },
+                                __self: undefined,
+                                children: "Email"
+                            })
+                        ]
+                    }),
+                    /*#__PURE__*/ _jsxRuntime.jsx("tbody", {
+                        __source: {
+                            fileName: "src/pages/ViewCustomers.jsx",
+                            lineNumber: 28
+                        },
+                        __self: undefined,
+                        children: customers.map((row)=>/*#__PURE__*/ _jsxRuntime.jsxs("tr", {
+                                __source: {
+                                    fileName: "src/pages/ViewCustomers.jsx",
+                                    lineNumber: 31
+                                },
+                                __self: undefined,
+                                children: [
+                                    /*#__PURE__*/ _jsxRuntime.jsx("td", {
+                                        __source: {
+                                            fileName: "src/pages/ViewCustomers.jsx",
+                                            lineNumber: 32
+                                        },
+                                        __self: undefined,
+                                        children: row.name
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsx("td", {
+                                        __source: {
+                                            fileName: "src/pages/ViewCustomers.jsx",
+                                            lineNumber: 33
+                                        },
+                                        __self: undefined,
+                                        children: row.phone
+                                    }),
+                                    /*#__PURE__*/ _jsxRuntime.jsx("td", {
+                                        __source: {
+                                            fileName: "src/pages/ViewCustomers.jsx",
+                                            lineNumber: 34
+                                        },
+                                        __self: undefined,
+                                        children: row.email
+                                    })
+                                ]
+                            })
+                        )
+                    })
+                ]
+            })
+        ]
+    }));
+}, "h68b3hq6gv818inqQQjo1WvNv/E=");
+
+  $parcel$ReactRefreshHelpers$b3e6.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","../api/user.api":"d9gCt","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"d9gCt":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "fetchUser", ()=>fetchUser
+);
+parcelHelpers.export(exports, "fetchCustomers", ()=>fetchCustomers
+);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+_axiosDefault.default.defaults.baseURL = 'http://localhost:3000/';
+_axiosDefault.default.defaults.headers.common['authentication'] = localStorage.getItem('authentication');
+const fetchUser = (id)=>_axiosDefault.default.get(`/users/${id}`)
+;
+const fetchCustomers = (role)=>_axiosDefault.default.get(`/users/customers/${role}`)
+;
+
+},{"axios":"iYoWk","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"ilzJE":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$407e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$407e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxRuntime = require("react/jsx-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+exports.default = Nav = ()=>{
+    const logout = ()=>{
+        localStorage.removeItem('authentication');
+        window.location = '/login';
+    };
+    const home = ()=>{
+        window.location = '/';
+    };
+    const login = ()=>{
+        window.location = '/login';
+    };
+    const signup = ()=>{
+        window.location = '/register';
+    };
+    return(/*#__PURE__*/ _jsxRuntime.jsx("div", {
+        __source: {
+            fileName: "src/pages/Nav.jsx",
+            lineNumber: 20
+        },
+        __self: undefined,
+        children: localStorage.authentication ? /*#__PURE__*/ _jsxRuntime.jsxs(_jsxRuntime.Fragment, {
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                    onClick: home,
+                    __source: {
+                        fileName: "src/pages/Nav.jsx",
+                        lineNumber: 24
+                    },
+                    __self: undefined,
+                    children: "HOME"
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                    __source: {
+                        fileName: "src/pages/Nav.jsx",
+                        lineNumber: 24
+                    },
+                    __self: undefined
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                    onClick: logout,
+                    __source: {
+                        fileName: "src/pages/Nav.jsx",
+                        lineNumber: 25
+                    },
+                    __self: undefined,
+                    children: "LOGOUT"
+                })
+            ]
+        }) : /*#__PURE__*/ _jsxRuntime.jsxs(_jsxRuntime.Fragment, {
+            children: [
+                /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                    onClick: login,
+                    __source: {
+                        fileName: "src/pages/Nav.jsx",
+                        lineNumber: 28
+                    },
+                    __self: undefined,
+                    children: "LOGIN"
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("br", {
+                    __source: {
+                        fileName: "src/pages/Nav.jsx",
+                        lineNumber: 28
+                    },
+                    __self: undefined
+                }),
+                /*#__PURE__*/ _jsxRuntime.jsx("button", {
+                    onClick: signup,
+                    __source: {
+                        fileName: "src/pages/Nav.jsx",
+                        lineNumber: 29
+                    },
+                    __self: undefined,
+                    children: "SIGNUP"
+                })
+            ]
+        })
+    }));
+};
+
+  $parcel$ReactRefreshHelpers$407e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}]},["2rAXy","l0CE5","e84fU"], "e84fU", "parcelRequire10c2")
 
 //# sourceMappingURL=index.b44a5685.js.map
