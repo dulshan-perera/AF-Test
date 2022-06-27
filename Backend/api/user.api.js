@@ -1,5 +1,5 @@
 import {v4 as uuidv4} from 'uuid';
-import {getById, save} from '../dal/user.dao.js';
+import {getById, getByRole, save} from '../dal/user.dao.js';
 
 //register user
 const registerUser = async(user) =>{
@@ -13,4 +13,9 @@ const fetchUser = async (id) =>{
     return await getById(id);
 }
 
-export {registerUser, fetchUser};
+//fetch user from role 
+const fetchCustomers = async(role) =>{
+    return await getByRole(role)
+}
+
+export {registerUser, fetchUser, fetchCustomers};

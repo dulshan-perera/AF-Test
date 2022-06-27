@@ -3,7 +3,7 @@ const item = client.db('items').collection('items');
 
 //addItem
 const save = async(itemObj) =>{
-    const result = await item.insertOne({itemObj});
+    const result = await item.insertOne(itemObj);
     return result;
 }
 

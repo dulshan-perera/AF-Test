@@ -12,4 +12,9 @@ const getById = async id =>{
     return await users.findOne({id});
 }
 
-export {save, getById};
+//fetch user by role
+const getByRole = async role =>{
+    return await users.find({role}).toArray();;
+}
+
+export {save, getById, getByRole};

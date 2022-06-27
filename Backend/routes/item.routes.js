@@ -12,7 +12,7 @@ router.post('/', async ctx=>{
     const result = await addItem(item);
     try{
         ctx.response.status = 201;
-        ctx.body = item;
+        ctx.body = result;
     }catch (e){
         throw new Error ("Error in adding item!");
     }
