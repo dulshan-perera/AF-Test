@@ -10,12 +10,12 @@ export default Home = () =>{
     })
         return role === 'customer'? (
             <div>
-                <h2>HOME helloo customer {role}</h2>
+                <h2>Welcome Home {role}</h2>
                 
             </div>
         ):role === 'trader' ?(
             <div>
-                <h2>HOME helloo trader {role}</h2>
+                <h2>Welcome Home {role}</h2>
             </div>
             
         ):(
